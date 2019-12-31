@@ -1,0 +1,67 @@
+.container {
+	text-align: left;
+  display: flex;
+	min-height: 100%;
+	flex-direction: column;
+
+	@media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+    flex-direction: row;
+  }
+
+}
+
+.content {
+	flex: 1;
+	order: 2;
+	position: relative;
+	z-index: 1;
+}
+
+.page {
+
+	&__content {
+		width: 85%;
+		margin: 0 auto;
+		padding: $global-spacing 0;
+		position: relative;
+	}
+
+	&__title {
+		border-bottom: $global-border;
+		padding-bottom: $global-spacing;
+
+		@media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+	    padding: 0 $global-spacing $global-spacing $global-spacing;
+		}
+
+		&--ideas{
+			@include vr(1.75, 1.5);
+
+			@media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+		    padding-bottom: $global-spacing*2;
+			}
+		}
+	}
+
+	&__form-title {
+		text-align: center;
+	}
+
+	&__content--narrow {
+	  max-width: $global-layout-width-narrow;
+
+		@media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+			padding-top: 100px;
+	  }
+	}
+
+	@media only screen and (max-width: $breakpoint-tablet-landscape) {
+
+			&__title,
+			&__form-title {
+				font-size: 1.75rem;
+			}
+
+	}
+
+}

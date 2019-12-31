@@ -1,0 +1,86 @@
+/* global variables */
+/* a good place to start customizing :) */
+
+$body-background: #fff;
+
+/* layout width */
+
+$global-layout-width: 90%;
+$global-max-layout-width: 1200px;
+$global-layout-width-narrow: 520px;
+
+/* breakpoints */
+
+$breakpoint-tablet-landscape: 1024px;
+$breakpoint-tablet-portrait: 800px;
+$breakpoint-mobile: 480px;
+
+/* typography */
+
+$global-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$heading-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+
+$global-font-size: 16px;
+$global-font-size-l: 1.2rem;
+$global-font-size-m: 1rem;
+$global-font-size-s: 0.875rem;
+
+$global-font-weight-thin: 300;
+$global-font-weight-regular: 400;
+$global-font-weight-bold: 700;
+
+$global-line-height: 1.5rem;
+$global-margin-bottom: 1.5rem;
+
+$global-capital-height: .75rem;
+
+$global-text-color: #555;
+$global-text-background: #f7f7f7;
+
+$heading-color: #555;
+
+$anchor-color: #00A843;
+$anchor-color-hover: #018937;
+
+$global-spacing: 1.5rem;
+$global-border-width: 1px;
+$global-border-style: solid;
+$global-border-color: #ddd;
+$global-border-radius: 0;
+$global-border: $global-border-width $global-border-style $global-border-color;
+$global-box-shadow: 0px 3px 5px rgba(0,0,0,.1);
+$global-transition: ease-out 0.25s;
+
+$form-control-height: 2.5rem;
+$form-control-border: $global-border-width solid #455E70;
+$form-control-background: #fff;
+$form-control-border-radius: 0;
+$form-control-shadow: inset 0px 3px 5px rgba(0,0,0,.1), 0px 0px 0px rgba(0,0,0,0);
+$form-control-focus-shadow: inset 0px 0px 0px rgba(0,0,0,0), 0px 3px 5px rgba(0,0,0,.1);
+
+$button-height: $form-control-height;
+$button-background-color: #00A843;
+$button-background-color-hover: #018937;
+$button-text-color: #fff;
+$button-text-color-hover: #fff;
+
+$button-secondary-background-color: #686d78;
+$button-secondary-background-color-hover: #4e525d;
+$button-secondary-text-color: #fff;
+
+$button-disabled-background-color: #ccc;
+$button-disabled-text-color: #fff;
+
+$button-border-radius: 0;
+
+/* icons */
+
+$icon-width: 1.5rem;
+$icon-height: 1.5rem;
+
+/* color scheme helper variables */
+
+$color-primary: #00A843;
+$color-secondary: #4e525d;
+$color-tertiary: #23252a;
+$color-accent: #00A843;

@@ -1,0 +1,37 @@
+.confirm {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  background: rgba(0,0,0,.3);
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    padding: $global-spacing;
+    background: #fff;
+    box-shadow: $global-box-shadow;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+
+  button {
+    padding: 0 $global-spacing;
+
+    &:last-child {
+      color: $color-primary;
+    }
+
+    &:hover {
+      background: none;
+      opacity: .5;
+      padding: 0 $global-spacing;
+    }
+  }
+
+}

@@ -1,0 +1,201 @@
+.ideas__intro {
+  text-align: center;
+  padding-top: 50px;
+
+  @media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+    padding-top: 200px;
+	}
+
+  img {
+    width: 64px;
+    height: auto;
+    display: block;
+    margin: $global-spacing/2 auto;
+  }
+}
+
+.ideas-wrapper {
+  padding-bottom: 60px;
+
+  @media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+    padding: 0 $global-spacing;
+	}
+}
+
+.ideas {
+
+  th, td {
+    line-height: $form-control-height;
+    padding: 5px 10px;
+    opacity: 1;
+    font-size: $global-font-size-s;
+  }
+
+  td:first-child {
+    padding-left: $global-spacing;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: $form-control-height/2;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      margin-top: 2px;
+      background: #ddd;
+      border-radius: 100%;
+    }
+  }
+
+  span {
+    display: block;
+    overflow: hidden;
+    max-height: 100px;
+    transition: $global-transition;
+  }
+
+  tr.fade {
+
+    td {
+      opacity: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    span {
+      max-height: 0;
+    }
+  }
+
+}
+
+.idea {
+
+  &__content {
+    width: auto;
+    position: relative;
+  }
+
+  td.idea__content {
+    font-size: $global-font-size-m;
+  }
+
+  &__score {
+    width: 10%;
+    min-width: 100px;
+    text-align: center;
+    font-weight: $global-font-weight-regular;
+
+    select {
+      text-align: center;
+    }
+  }
+
+  &__avg {
+    width: 10%;
+    text-align: center;
+  }
+
+  &__actions {
+    width: 10%;
+    text-align: right;
+    white-space: nowrap;
+
+    button:last-child {
+      margin-left: 15px;
+    }
+  }
+
+}
+
+.idea__button--new {
+  position: absolute;
+  top: $global-spacing;
+  right: $global-spacing;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+
+  img {
+    display: block;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-landscape) {
+    position: fixed;
+    top: auto;
+    bottom: $global-spacing;
+  }
+}
+
+.idea__button--save {
+  width: 19px;
+}
+
+.idea__button--cancel {
+  width: 16px;
+}
+
+@media only screen and (min-width: $breakpoint-tablet-landscape+1) {
+  .idea__button--edit,
+  .idea__button--remove {
+    opacity: 0;
+    transition: $global-transition;
+
+    .idea:hover & {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet-landscape) {
+  .ideas {
+
+    table, tbody, th, td, tr {
+      display: block !important;
+      width: 100% !important;
+      padding: 0;
+    }
+    thead {
+      display: none;
+    }
+    tr {
+      border-bottom: $global-border;
+    }
+
+    td.idea__content {
+      padding: $global-spacing 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    td.idea__score,
+    td.idea__avg {
+      text-align: right;
+      padding-left: 70%;
+      position: relative;
+
+      &:before {
+        content: attr(data-title);
+        position: absolute;
+        width: 60%;
+        top: 0;
+        left: 0;
+        text-align: left;
+      }
+    }
+
+    td.idea__actions {
+      padding: $global-spacing 0;
+    }
+
+  }
+}
